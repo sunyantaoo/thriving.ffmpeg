@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Version>7.1.0</Version>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);LibContentTarget</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+	<Target Name="LibContentTarget">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/avcodec-61.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/avdevice-61.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/avformat-61.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/avutil-59.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/avfilter-10.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/postproc-58.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/swresample-5.dll">
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+			<TfmSpecificPackageFile Include="../3rdParty/ffmpeg/bin/swscale-8.dll" >
+				<PackagePath>lib\$(TargetFramework)</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
+</Project>
